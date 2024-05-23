@@ -1,6 +1,6 @@
 import os
 
-
+# MAIN MENU FUNCTION
 def ana_menu():
     print("\n*** Basit Not Defteri Uygulaması ***")
     print("1. Yeni Metin Dosyası Oluştur")
@@ -11,7 +11,7 @@ def ana_menu():
     secim = input("Bir seçenek girin (1-5): ")
     return secim
 
-
+# FILE CREATOR FUNCTION
 def dosya_olustur():
     dosya_adi = input("Oluşturmak istediğiniz dosyanın adını girin (uzantı olmadan): ") + ".txt"
     try:
@@ -24,7 +24,7 @@ def dosya_olustur():
     except Exception as e:
         print(f"Bir hata oluştu: {e}")
 
-
+# FILE EDITOR FUNCTION
 def dosya_duzenle():
     dosya_adi = input("Düzenlemek istediğiniz dosyanın adını girin (uzantı olmadan): ") + ".txt"
     try:
@@ -37,7 +37,7 @@ def dosya_duzenle():
     except Exception as e:
         print(f"Bir hata oluştu: {e}")
 
-
+# DELETE FILE FUNCTION
 def dosya_sil():
     dosya_adi = input("Silmek istediğiniz dosyanın adını girin (uzantı olmadan): ") + ".txt"
     try:
@@ -49,7 +49,7 @@ def dosya_sil():
     except Exception as e:
         print(f"Bir hata oluştu: {e}")
 
-
+# FILE LIST FUNCTION
 def dosya_listele():
     dosyalar = [f for f in os.listdir() if f.endswith('.txt')]
     if dosyalar:
